@@ -8,12 +8,16 @@ CREATE TABLE IF NOT EXISTS user (
   UNIQUE KEY uid (uid)
 );
 
+/*INSERT INTO user (uid, username, password) VALUES (NULL, 'lola', 'password') (NULL, 'lola', 'password') (NULL, 'lola', 'password')*/
+
 CREATE TABLE IF NOT EXISTS pairings (
 	uid1 int NOT NULL,
 	uid2 int NOT NULL,
 	PRIMARY KEY (uid1, uid2)
+	FOREIGN KEY (uid1) references user(uid),
+	FOREIGN KEY (uid2) references user(uid)
 	);
-
+/*INSERT INTO pairings (uid1, uid2) VALUES (0, 1) (1, 2) (0, 2)*/
 
 CREATE TABLE IF NOT EXISTS email (
 	email varchar(30) NOT NULL,
