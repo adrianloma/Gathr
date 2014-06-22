@@ -28,6 +28,7 @@ CREATE TABLE IF NOT EXISTS event(
 	eventid int NOT NULL AUTO_INCREMENT,
 	uid int NOT NULL,
 	name varchar(100) NOT NULL,
+	location varchar(100),
 	hora TIME, 
 	fecha DATE,
 	PRIMARY KEY(eventid),
