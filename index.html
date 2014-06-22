@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <head>
   <title>gathr</title>
+
+<meta property="og:title" content="gathr - " />
+<meta property="og:type" content="company" />
+<meta property="og:site_name" content="gathr - " />
+<meta property="og:description" content="Gathr lets you create and share events quickly with friends, so you don't miss out on anything." />
+<meta property="og:url" content="gathrapp.co" />
+<meta property="og:image" content="" />
+
   <style>
     body {
       text-align: center;
@@ -13,6 +21,7 @@
       font-family: helvetica;
       text-rendering: optimizeSpeed;
     }
+
     
     p {
         font-size: 42px;
@@ -48,6 +57,10 @@
       background: black;
       color: white;
     }
+
+    footer:a{
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -55,22 +68,14 @@
   <div class="info">
 <a href="http://imgur.com/co0vEQO"><img src="http://i.imgur.com/co0vEQO.png" title="Hosted by imgur.com" /></a>   
  <p>Gathr lets you create and share events quickly with friends, so you don't miss out on anything.</p>
-    <form action="/landing.php" method="post">
-      <?php
-        if (array_key_exists('email', $_POST) && !empty($_POST['email']))
-        {
-          $thing = $_POST['email']."success";
-        }
-        else $thing = 'temp string';
-        printf("<input type=\"email\" name = \"email\" placeholder=\"$thing\">");
-        ?>
-      
-      <input type="submit">
-    </form>
+   
+   <!-- Begin LaunchRock Widget -->
+<div id="lr-widget" rel="IKVO1PRL"></div>
+<script type="text/javascript" src="//ignition.launchrock.com/ignition-current.min.js"></script>
+<!-- End LaunchRock Widget -->
 
-  </div>
 </body>
 <footer>
-<a href="http://imgur.com/fjEVU95"><img src="http://i.imgur.com/fjEVU95.png?1" title="Hosted by imgur.com" /></a>
+
 </footer>
 
