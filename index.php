@@ -54,9 +54,20 @@
   <div class="mask"></div>
   <div class="info">
     <a href="http://imgur.com/l9gdoMj"><img src="http://i.imgur.com/l9gdoMj.png?1" title="Hosted by imgur.com" /></a>
-    <p>Gathr lets you create and share events quickly with friends, so you don't miss out on any gatherings.</p>
-    <input type="email" placeholder="Your email">
-    <input type="submit">
+    <p>Gathr lets you create and share events quickly with friends, so you don't miss out on anything.</p>
+    <form action="/landing.php" method="post">
+      <?php
+        if (array_key_exists('email', $_POST) && !empty($_POST['email']))
+        {
+          $thing = $_POST['email']."success";
+        }
+        else $thing = 'temp string';
+        printf("<input type=\"email\" name = \"email\" placeholder=\"$thing\">");
+        ?>
+      
+      <input type="submit">
+    </form>
+
   </div>
 </body>
 
